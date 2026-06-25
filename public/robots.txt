@@ -3,7 +3,7 @@ Allow: /
 Disallow: /api/
 
 # Sitemaps
-Sitemap: https://vanty-galeria.com/sitemap.xml
+Sitemap: https://vanty.netlify.app/sitemap.xml
 
 # Crawl delay
 Crawl-delay: 1
