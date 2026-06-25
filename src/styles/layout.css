@@ -1,0 +1,248 @@
+/**
+ * Layout styles
+ * Header, footer, main content area, and general layout structure
+ * Mobile-first approach
+ */
+
+/* Header */
+.header {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+}
+
+.header__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.header__brand {
+  display: block;
+  transition: opacity var(--transition-fast);
+}
+
+.header__brand:hover {
+  opacity: 0.8;
+}
+
+.header__title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+/* Navigation */
+.header__nav {
+  margin-left: auto;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  list-style: none;
+}
+
+.nav-list__item {
+  margin: 0;
+}
+
+.nav-link {
+  display: inline-block;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  padding: var(--space-sm) 0;
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+}
+
+/* Main content area */
+.main {
+  min-height: calc(100vh - 200px);
+}
+
+/* Section container */
+.section {
+  padding: var(--space-xl) var(--space-md);
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.section__title {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  font-size: var(--font-size-2xl);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  margin-top: var(--space-2xl);
+}
+
+.footer__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+.footer__section {
+  text-align: center;
+}
+
+.footer__title {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-sm);
+}
+
+.footer__subtitle {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.footer__nav {
+  text-align: center;
+}
+
+.footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-md);
+  list-style: none;
+}
+
+.footer__links li {
+  margin: 0;
+}
+
+.footer__link {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  transition: color var(--transition-fast);
+}
+
+.footer__link:hover {
+  color: var(--color-accent);
+}
+
+.footer__bottom {
+  text-align: center;
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.footer__copyright {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .header__container {
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  .section {
+    padding: var(--space-2xl) var(--space-md);
+  }
+
+  .footer__container {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  .footer__section {
+    text-align: left;
+  }
+
+  .footer__nav {
+    text-align: right;
+  }
+
+  .footer__links {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .footer__bottom {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer__container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .footer__nav {
+    text-align: center;
+  }
+
+  .footer__links {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.footer__social {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.footer__social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  color: var(--color-muted);
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.footer__social-link:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.footer__social-link:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+.footer__social-icon {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+ 
