@@ -8,7 +8,7 @@ export const events = [
     location: "Sala de Exposiciones Palacete de Mendoza, en la Plaza de Santa María de Pontevedra",
     image: new URL("../assets/images/events/Carmen Touza y Vanty.jpg", import.meta.url).href,
     alt: '"Vanty" en la sala de Exposiciones Palacete de Mendoza',
-    summary: 'La Sala de Exposiciones Palacete de Mendoza, en la Plaza de Santa María de Pontevedra, acoge la exposición "Fantasías" del artista Santiago Pichel Hernández, conocido como "Vanty". Entre los títulos de sus obras, destacan "Alivio", "Caminantes", "De algo hay que morir", "El Niño", "El otro lado", "El trompeta", "Los monjes" y "Ray Charles".',
+    summary: 'La Sala de Exposiciones Palacete de Mendoza, en la Plaza de Santa María de Pontevedra, acoge la exposición "Fantasías" del artista Santiago Piñel Hernández, conocido como "Vanty". Entre los títulos de sus obras, destacan "Alivio", "Caminantes", "De algo hay que morir", "El Niño", "El otro lado", "El trompeta", "Los monjes" y "Ray Charles".',
     body: ""
   },
   {

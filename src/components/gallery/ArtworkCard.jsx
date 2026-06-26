@@ -8,7 +8,7 @@ export function ArtworkCard({ artwork, onSelect }) {
       <button type="button" className="artwork-card__button" onClick={onSelect}>
         <div className="artwork-card__image-wrapper">
           <img
-            src={artwork.image}
+            src={artwork.thumbnail}
             alt={artwork.alt}
             loading="lazy"
             className="artwork-card__image"

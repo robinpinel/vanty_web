@@ -140,4 +140,3 @@ MIT
 ## 👤 Autor
 
 Vanty - Pintor y artista plástico
-"# vanty_web" 
