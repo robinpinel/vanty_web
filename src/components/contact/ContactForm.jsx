@@ -34,18 +34,19 @@ export function ContactForm() {
     const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    const contactEmail = import.meta.env.VITE_CONTACT_EMAIL;
 
-    if (!serviceId || !templateId || !publicKey) {
+    if (!serviceId || !templateId || !publicKey || !contactEmail) {
       setFeedback({
         type: "error",
-        message: "Falta configurar EmailJS. Añade VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID y VITE_EMAILJS_PUBLIC_KEY."
+        message: "Falta configurar EmailJS. Por favor, revisa las variables de entorno."
       });
       return;
     }
 
     setIsSending(true);
     setFeedback(null);
-
+   
     try {
       await emailjs.send(
         serviceId,
@@ -55,7 +56,7 @@ export function ContactForm() {
           reply_to: formData.email,
           subject: formData.subject,
           message: formData.message,
-          to_email: import.meta.env.VITE_CONTACT_EMAIL || "tu@email.com"
+          to_email: contactEmail
         },
         publicKey
       );
