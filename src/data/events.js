@@ -1,6 +1,18 @@
 export const events = [
-  {
+    {
     id: "evento-1",
+    type: "exposicion",
+    title: '"Ensueños". "Vanty" en A Casa da Cultura de Chantada',
+    date: "2025-04-01",
+    displayDate: "Abril, 2025",
+    location: "A Casa da Cultura de Chantada. Praza do Mercado, 1, 27500 Chantada, Lugo",
+    image: new URL("../assets/images/events/Chantada.webp", import.meta.url).href,
+    alt: '"Vanty" na Casa da Cultura de Chantada',
+    summary: 'La Casa de la Cultura de Chantada acogió, durante el mes de abril, la exposición "Ensueños" del pintor "Vanty". El objetivo era exponer las emociones de cada cuadro para convertirlos en fantasías.',
+    body: ""
+  },
+  {
+    id: "evento-2",
     type: "exposicion",
     title: '"Vanty" en la sala de Exposiciones Palacete de Mendoza',
     date: "2024-08-08",
@@ -12,7 +24,7 @@ export const events = [
     body: ""
   },
   {
-    id: "evento-2",
+    id: "evento-3",
     type: "exposicion",
     title: '"Vanty" en Tandem Art Gallery International "Autumn Color"',
     date: "2016-11-04",
